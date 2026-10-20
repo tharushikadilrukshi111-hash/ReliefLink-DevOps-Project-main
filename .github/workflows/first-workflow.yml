@@ -1,0 +1,24 @@
+name: ReliefLink Pipeline
+
+on:
+  push:
+    branches: [ "main", "frontend", "backend" ]
+
+jobs:
+  frontend-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        
+      - name: Test Frontend Message
+        run: echo "Running Frontend build or tests..."
+
+  backend-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        
+      - name: Test Backend Message
+        run: echo "Running Backend build or tests..."
